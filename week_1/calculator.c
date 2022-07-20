@@ -13,8 +13,8 @@ int sub(int first_number, int second_number) {
     return first_number - second_number;
 }
 
-int division(int first_number, int second_number) {
-    return first_number / second_number;
+float division(int first_number, int second_number) {
+    return (float) first_number / (float) second_number;
 }
 
 int multiplication(int first_number, int second_number) {
@@ -26,25 +26,25 @@ int main(void) {
     int option = GetLongLong(); // verybig interger -> 64 bits
     if (option == 1) {
         printf("first number: ");
-        int first_number = GetInt();
+        float first_number = GetFloat();
 
         printf("second number: ");
-        int second_number = GetInt();
+        float second_number = GetFloat();
 
-        int operation = sum(first_number, second_number);
+        float operation = sum(first_number, second_number);
         red();
-        printf("result of sum: %i \n ", operation);
+        printf("result of sum: %.2f \n ", operation);
         exit(0);
     } else if(option == 2) {
         printf("first number: ");
-        int first_number = GetInt();
+        float first_number = GetInt();
 
         printf("second number: ");
-        int second_number = GetInt();
+        float second_number = GetInt();
 
-        int operation = sub(first_number, second_number);
+        float operation = sub(first_number, second_number);
         red();
-        printf("result of subtraction: %i \n ", operation);
+        printf("result of subtraction: %f \n ", operation);
         exit(0);
     } else if(option == 3) {
         printf("first number: ");
@@ -53,20 +53,20 @@ int main(void) {
         printf("second number: ");
         int second_number = GetInt();
 
-        int operation = division(first_number, second_number);
+        float operation = division(first_number, second_number);
         red();
-        printf("result of division: %i \n ", operation);
+        printf("result of division: %f \n ", operation);
         exit(0);
     } else if(option == 4) {
         printf("first number: ");
-        int first_number = GetInt();
+        float first_number = GetInt();
 
         printf("second number: ");
-        int second_number = GetInt();
+        float second_number = GetInt();
 
-        int operation = multiplication(first_number, second_number);
+        float operation = multiplication(first_number, second_number);
         red();
-        printf("result of multiplication: %i \n ", operation);
+        printf("result of multiplication: %f \n ", operation);
         exit(0);
     } else {
         red();
